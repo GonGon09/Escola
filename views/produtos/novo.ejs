@@ -1,0 +1,77 @@
+<%- include('../includes/header.ejs', { titulo: 'Cadastro de Produto' }) %>
+
+<main class="produto-container">
+  <section class="form-card">
+    <h2>🛍️ Cadastro de Novo Produto</h2>
+
+    <form action="/produtos/novo/novo" method="post" class="form-produto">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="foto">Foto do Produto (URL):</label>
+          <input type="text" name="foto" placeholder="Ex: https://minhaloja.com/img/produto.jpg" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nome_produto">Nome do Produto:</label>
+          <input type="text" name="nome_produto" placeholder="Ex: Camiseta Slim Fit" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tamanho">Tamanho:</label>
+          <input type="text" name="tamanho" placeholder="Ex: P, M, G, GG" required>
+        </div>
+
+        <div class="form-group">
+          <label for="marca">Marca:</label>
+          <select name="marca" required>
+            <option value="">Selecione uma marca</option>
+            <% if (marcas && marcas.length > 0) { %>
+              <% marcas.forEach(m => { %>
+                <option value="<%= m.id_marca %>"><%= m.nome_marca %></option>
+              <% }) %>
+            <% } else { %>
+              <option value="">Nenhuma marca cadastrada</option>
+            <% } %>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" name="quantidade" placeholder="Ex: 50" required>
+        </div>
+
+        <div class="form-group">
+          <label for="sexo">Gênero:</label>
+          <select name="sexo" required>
+            <option value="">Selecione</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+            <option value="U">Unissex</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="valor">Valor (R$):</label>
+          <input type="number" name="valor" placeholder="Ex: 149.90" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ativo">Ativo:</label>
+          <select name="ativo" required>
+            <option value="true">Ativo</option>
+            <option value="false">Inativo</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btns">
+        <button type="submit" class="btn btn-principal">Salvar Produto</button>
+        <a href="/produtos/listar" class="btn btn-secundario">Cancelar</a>
+      </div>
+    </form>
+  </section>
+</main>
+
+<%- include('../includes/footer.ejs') %>

@@ -1,0 +1,399 @@
+<%- include('../includes/header.ejs', { titulo: 'Lista de Produtos' }) %>
+
+    <main>
+
+        <div class="carrossel">
+            <div class="slides">
+                <div class="slide"><img src="/img/1920w.avif" alt="Produto 1"></div>
+                <div class="slide"><img src="/img/1920w_2.avif" alt="Produto 2"></div>
+                <div class="slide"><img src="/img/1920w_3.avif" alt="Produto 3"></div>
+                <div class="slide"><img src="/img/1920w_4.avif" alt="Produto 4"></div>
+                <div class="slide"><img
+                        src="https://imagedelivery.net/zeXhra0JeU7Z6pD0rkNTDg/6311845f-9a96-4903-30d2-b039642f6900/1366w"
+                        alt="Produto 5"></div>
+                <div class="slide"><img
+                        src="https://imagedelivery.net/zeXhra0JeU7Z6pD0rkNTDg/d66a7880-4ef0-4d0a-0c41-1b88a3224f00/1366w"
+                        alt="Produto 6"></div>
+                <div class="slide"><img
+                        src="https://imagedelivery.net/zeXhra0JeU7Z6pD0rkNTDg/18728772-3846-4e26-9b7e-8c23a911d300/public"
+                        alt="Produto 7"></div>
+            </div>
+
+            <div class="controles">
+                <button class="botao" id="voltar">&#10094;</button>
+                <button class="botao" id="avancar">&#10095;</button>
+            </div>
+        </div>
+
+        <div>
+            <% if (usuario.adm==true) { %>
+      <a href="/produtos/novo" class="Adicionar">Adicionar produto</a>
+
+        <% }%>
+        </div>
+
+        <div class="flex gap-4 overflow-x-auto px-4 py-5 no-scrollbar">
+            <div
+                class="flex flex-col justify-center  items-center w-45 h-45 bg-white rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
+                <img src="https://droper-lapse.us-southeast-1.linodeobjects.com/2025110518300788-309.webp" class="w-3/5 h-3/5 object-contain">
+                <span class="text-sm mt-1">Sneakers</span>
+            </div>
+
+            <div
+                class="flex flex-col justify-center items-center w-45 h-45 bg-white rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
+                <img src="https://droper-lapse.us-southeast-1.linodeobjects.com/20251107193529367-625.webp" class="w-4/5 h-4/5 object-contain">
+                <span class="text-sm mt-0">Streetwear</span>
+            </div>
+
+            <div
+                class="flex flex-col justify-center items-center w-45 h-45 bg-white rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
+                <img src="https://droper-lapse.us-southeast-1.linodeobjects.com/20251106201721248-481.webp" class="w-4/5 h-4/5 object-contain">
+                <span class="text-sm mt-1">Nacional</span>
+            </div>
+
+            <div
+                class="flex flex-col justify-center items-center w-45 h-45 bg-white rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
+                <img src="https://droper-media.us-southeast-1.linodeobjects.com/222024135214750.webp" class="w-4/5 h-4/5 object-contain">
+                <span class="text-sm mt-1">Eletrônicos</span>
+            </div>
+            <div
+                class="flex flex-col justify-center items-center w-45 h-45 bg-white rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
+                <img src="https://droper-lapse.us-southeast-1.linodeobjects.com/20251104141451827-585.webp" class="w-4/5 h-4/5 object-contain">
+                <span class="text-sm mt-1">Colecionáveis</span>
+            </div>
+            <div
+                class="flex flex-col justify-center items-center w-45 h-45 bg-white rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
+                <img src="https://droper-lapse.us-southeast-1.linodeobjects.com/20251022152304373-590.webp" class="w-4/5 h-4/5 object-contain">
+                <span class="text-sm mt-1">Vintage</span>
+            </div>
+            <div
+                class="flex flex-col justify-center items-center w-45 h-45 bg-white rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
+                <img src="https://droper-lapse.us-southeast-1.linodeobjects.com/20251104175956887-553.webp" class="w-4/5 h-4/5 object-contain">
+                <span class="text-sm mt-1">Relógios</span>
+            </div>
+            <div
+                class="flex flex-col justify-center items-center w-45 h-45 bg-white rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
+                <img src="https://droper-lapse.us-southeast-1.linodeobjects.com/20251105185933484-114.webp" class="w-4/5 h-4/5 object-contain">
+                <span class="text-sm mt-1">Luxo</span>
+            </div>
+        </div>
+
+        <div>
+            
+        </div>
+
+    </div>
+</section>
+
+<div class="marcas-container">
+    <div class="marca">
+        <img src="https://texbrasil.com.br/wp-content/uploads/2024/08/capturar-1667852111_1705587794.png" alt="Aramis">
+        <span>Aramis</span>
+    </div>
+
+    <div class="marca">
+        <img src="https://bfshow.com.br/wp-content/uploads/2023/07/logo-anatomicnova.png" alt="Anatomic">
+        <span>Anatomic</span>
+    </div>
+
+    <div class="marca">
+        <img src="https://parqueshoppingmaia.com.br/assets/loja/reserva.png" alt="Reserva">
+        <span>Reserva</span>
+    </div>
+
+    <div class="marca">
+        <img src="https://www.mkmmenswear.com.br/wp-content/uploads/2016/08/individual-logo-mkm.jpg" alt="Individual">
+        <span>Individual</span>
+    </div>
+
+    <div class="marca">
+        <img src="https://images.seeklogo.com/logo-png/21/1/lacoste-logo-png_seeklogo-218359.png" alt="Lacoste">
+        <span>Lacoste</span>
+    </div>
+
+    <div class="marca">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR73OOpy8thMuS9YTXtB_iHvu4hErz81b1mEg&s" alt="Tommy">
+        <span>Tommy</span>
+    </div>
+
+    <div class="marca">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjdKZZzzFol811OPtYCp_kayu1wGT_TbpcKA&s" alt="Calvin Klein">
+        <span>Calvin Klein</span>
+    </div>
+
+    <div class="marca">
+        <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0015/0003/brand.gif?itok=nxUfLayt" alt="Levi's">
+        <span>Levi's</span>
+    </div>
+    <div class="Produtos">
+        
+    </div>
+</div>
+
+<div class="banner">
+
+</div>
+
+<style>
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url(https://droper-lapse.us-southeast-1.linodeobjects.com/20251107165845520-585.webp)
+;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Conteúdo sobre o degradê */
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
+
+.banner-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.banner-content button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner-content button:hover {
+    background: #f2f2f2;
+}
+</style>
+
+
+<style>
+.marcas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #e6e6e6;
+    padding: 30px;
+}
+
+.marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.marca:hover {
+    transform: scale(1.05);
+}
+
+.marca img {
+    max-width: 70px;
+    max-height: 50px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.marca span {
+    font-size: 14px;
+    color: #000;
+}
+</style>
+
+
+
+       
+
+        <style>
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+
+            .no-scrollbar {
+                scrollbar-width: none;
+            }
+        </style>
+
+
+
+        <style>
+            .form-busca {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin: 20px 0;
+            }
+
+            .form-busca input,
+            select,
+            button {
+                padding: 8px;
+                font-size: 16px;
+            }
+
+            /* CARDS */
+            .cards-produtos {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .card {
+                background: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+                display: flex;
+                flex-direction: column;
+                transition: 0.2s;
+            }
+
+            .card:hover {
+                transform: scale(1.03);
+            }
+
+            .card-img img {
+                width: 100%;
+                height: 160px;
+                object-fit: cover;
+                display: block;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+
+            .card-actions {
+                display: flex;
+                justify-content: space-between;
+                padding: 15px;
+                gap: 10px;
+            }
+
+            .btn-editar,
+            .btn-excluir {
+                flex: 1;
+                padding: 8px;
+                border: none;
+                cursor: pointer;
+                border-radius: 6px;
+            }
+
+            .btn-editar {
+                background-color: dodgerblue;
+                color: white;
+            }
+
+            .btn-excluir {
+                background-color: crimson;
+                color: white;
+            }
+
+            /* CARROSSEL */
+            .carrossel {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: 20px;
+            }
+
+            .slides {
+                display: flex;
+                transition: transform 0.6s ease-in-out;
+            }
+
+            .slide {
+                min-width: 100%;
+            }
+
+            .slide img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                display: block;
+            }
+
+            .controles {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
+                padding: 0 10px;
+            }
+
+            .botao {
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                font-size: 28px;
+                cursor: pointer;
+                padding: 6px 14px;
+                border-radius: 50%;
+                transition: 0.3s;
+            }
+
+            .botao:hover {
+                background: rgba(255, 255, 255, 0.4);
+            }
+        </style>
+
+        <script>
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            let indice = 0;
+
+            function mostrarSlide(index) {
+                slides.style.transform = `translateX(${-index * 100}%)`;
+            }
+
+            document.getElementById('avancar').addEventListener('click', () => {
+                indice = (indice + 1) % totalSlides;
+                mostrarSlide(indice);
+            });
+
+            document.getElementById('voltar').addEventListener('click', () => {
+                indice = (indice - 1 + totalSlides) % totalSlides;
+                mostrarSlide(indice);
+            });
+
+            setInterval(() => {
+                indice = (indice + 1) % totalSlides;
+                mostrarSlide(indice);
+            }, 5000);
+        </script>
+
+        <%- include('../includes/footer.ejs') %>

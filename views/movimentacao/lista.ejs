@@ -1,0 +1,56 @@
+<%- include('../includes/header.ejs', { titulo: 'Movimentação de Estoque' }) %>
+
+<main class="container-mov">
+    <h2>📦 Movimentações de Estoque</h2>
+
+    <!-- Resumo -->
+    <div class="resumo">
+        <div class="card entrada">
+            <h3>Entradas</h3>
+            <p><%= resumo.total_entradas || 0 %></p>
+        </div>
+        <div class="card saida">
+            <h3>Saídas</h3>
+            <p><%= resumo.total_saidas || 0 %></p>
+        </div>
+        <div class="card saldo">
+            <h3>Saldo</h3>
+            <p><%= resumo.saldo || 0 %></p>
+        </div>
+    </div>
+
+    <a href="/movimentacao/novo" class="btn-novo">➕ Nova Movimentação</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Produto</th>
+                <th>Tipo</th>
+                <th>Quantidade</th>
+                <th>Data</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% dadosMov.forEach(item => { %>
+                <tr>
+                    <td><%= item.id_movimentacao %></td>
+                    <td><%= item.nome_produto %></td>
+                    <td class="<%= item.tipo_movimentacao === 'E' ? 'entrada-texto' : 'saida-texto' %>">
+                        <%= item.tipo_movimentacao === 'E' ? 'Entrada' : 'Saída' %>
+                    </td>
+                    <td><%= item.quantidade %></td>
+                    <td><%= new Date(item.data).toLocaleDateString("pt-BR") %></td>
+                    <td>
+                        <form action="/movimentacao/excluir/<%= item.id_movimentacao %>" method="POST" style="display:inline;">
+                            <button class="btn-excluir" onclick="return confirm('Deseja realmente excluir esta movimentação?')">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</main>
+
+<%- include('../includes/footer.ejs') %>

@@ -1,0 +1,18 @@
+<%- include('../includes/header.ejs', { titulo: 'Nova Categoria' }) %>
+
+<main>
+    <h2>Cadastrar Nova Categoria</h2>
+
+    <form action="/categorias/novo" method="POST" class="form">
+
+        <div class="form-group">
+            <label>Nome da Categoria</label>
+            <input type="text" name="nome_categoria" required placeholder="Digite o nome da categoria">
+        </div>
+
+        <button type="submit" class="btn-salvar">Salvar</button>
+        <a href="/categorias/listar" class="btn-voltar">Voltar</a>
+    </form>
+</main>
+
+<%- include('../includes/footer.ejs') %>

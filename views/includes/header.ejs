@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/landing.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/movimentacao.css" />
+  <title>Elegance wear - <%- titulo -%></title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+
+  <!-- Admin -->
+  <header class="header">
+    <div class="logo">Elegance wear</div>
+
+    <nav>
+
+      <% if (usuario.adm==true) { %>
+      <a href="/admin">Home</a>
+      <a href="/categorias/listar">Categorias</a>
+      <a href="/produtos/listar">Produtos</a>
+      <a href="/movimentacao/listar">Movimentação</a>
+
+        <% } else {%>
+          <a href="#heroSection">Home</a>
+          <a href="/produtos/listar">Produtos</a>
+          <a href="/categorias/listar">Categorias</a>
+          <a href="#">Marcas</a>
+          <a href="#">Carrinho</a>
+          <% } %>
+    </nav>
+
+    <div>
+      <span>
+        <%= usuario.nome %>
+      </span>
+    </div>
+
+    <div class="header-right">
+      <div class="search-bar">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Pesquisar..." />
+      </div>
+
+      <% if(usuario){ %>
+        <a href="/admin/logout" class="btn-login"> Logout </a>
+        <% } else{ %>
+          <a href="/produtos/listar" class="btn-login"> Entrar </a>
+          <% } %>
+
+    </div>
+  </header>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="./css/landing.css" />
+<link rel="stylesheet" href="./css/style.css" />
+<title>𝔈ᥣᥱ𝔤ᥲᥒᥴᥱ ᥕᥱᥲ𝔯 </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+
+.btnHero {
+  transition: 0.4s ease-in-out;
+  transform: scale(1);
+}
+.btnHero:hover {
+  transform: scale(1.08);
+}
+
+.cards .card {
+  transition: all 0.4s ease;
+}
+.cards .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0);
+}
+
+/* hero animation */
+.containerHero {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeIn 1.3s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* header dinâmico */
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(1px);
+  transition: background 0.3s ease-in-out;
+}
+
+/* scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+<header class="header">
+  <div class="logo">Elegance wear</div>
+
+  <nav>
+      <a href="/">Home</a>
+      <a href="/categorias/listar">Categorias</a>
+      <a href="/produtos/listar">Produtos</a>
+      <a href="/produtos/listar">Marcas</a>
+  </nav>
+
+  <div class="header-right">
+    <div class="search-bar">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Pesquisar..." />
+    </div>
+    <a href="/admin/login" class="btn-login">Entrar →</a>
+</header>
+<hr>
+<section id="heroSection">
+  <img src="https://droper-lapse.us-southeast-1.linodeobjects.com/20251023152930826-538.webp" class="banner">
+  <div class="containerHero">
+    <h1>VISTA-SE COM CONFIANÇA.</h1>
+    <p> Encontre peças que unem design, conforto e autenticidade <br>
+      o essencial para quem valoriza elegância e atitude. </p>
+      
+  </div>
+</section>
+<hr>
+<section class="sobre-nos" id="sobre">
+  <div class="sobre-container">
+    <h2 class="sobre-titulo">Sobre Nós </h2>
+    <p class="sobre-texto">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum elit malesuada, rutrum justo in, tincidunt diam.
+    </p>
+  </div>
+</section>
+<hr>
+<section class="features">
+  <h2>𝖯𝗈𝗋 𝗊𝗎𝖾 𝖾𝗌𝖼𝗈𝗅𝗁𝖾𝗋 𝖺 𝔈ᥣᥱ𝔤ᥲᥒᥴᥱ ᥕᥱᥲ𝔯?</h2>
+
+  <div class="cards">
+    <div class="card"><i data-lucide="book-open"></i><h3>Educação de Qualidade</h3><p>Lorem ipsum dolor sit amet...</p></div>
+    <div class="card"><i data-lucide="laptop"></i><h3>Tecnologia e Inovação</h3><p>Lorem ipsum dolor sit amet...</p></div>
+    <div class="card"><i data-lucide="graduation-cap"></i><h3>Professores Capacitados</h3><p>Lorem ipsum dolor sit amet...</p></div>
+    <div class="card"><i data-lucide="users"></i><h3>Comunidade e Apoio</h3><p>Lorem ipsum dolor sit amet...</p></div>
+    <div class="card"><i data-lucide="globe"></i><h3>Conexão Global</h3><p>Lorem ipsum dolor sit amet...</p></div>
+    <div class="card"><i data-lucide="heart"></i><h3>Ambiente Acolhedor</h3><p>Lorem ipsum dolor sit amet...</p></div>
+  </div>
+</section>
+<hr>
+<section class="cta">
+  <div class="cta-content">
+    <h2>Pronto para transformar seu aprendizado?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <a href="#contato" class="cta-button">Comece Agora</a>
+  </div>
+</section>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+lucide.createIcons();
+
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+<footer class="siate-footer">
+  <div class="footer-acontent">
+    <div class="footer-laogo">
+      <h2 style="color: white">𝔈ᥣᥱ𝔤ᥲᥒᥴᥱ ᥕᥱᥲ𝔯</h2>
+    </div>
+    <p class="footer-copy">© 2025 𝔈ᥣᥱ𝔤ᥲᥒᥴᥱ ᥕᥱᥲ𝔯. Todos os direitos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>
